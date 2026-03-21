@@ -54,3 +54,7 @@ def render_win(win_state):
 
     time.sleep(1)
 ##
+
+def render_regras():
+    print("regras")
+##

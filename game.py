@@ -17,8 +17,7 @@ def game():
     #iniciar as variaveis
 
     coins = 100
-
-    time.sleep(0.5)
+    
     while(1):
         coins = game_loop(coins)
 ##
@@ -92,7 +91,7 @@ def game_loop(coins):
 
     coins = payout(coins, bet, win)
     render_win(win)
-    
+
     return coins
 ##
 

@@ -16,6 +16,7 @@ valores = {
     "K": 10
 }
 
+
 naipes = ["♠", "♥", "♦", "♣"]
 
 
@@ -24,15 +25,19 @@ def value_card(carta):
 ##
 
 def value_mao(mao):
+    # Calculate hand value, counting aces as 11 initially
     value = 0
+    aces = 0
     for carta in mao:
+        if (carta[0] == "A"):
+            aces += 1
         value += value_card(carta)
-    
-    if(value > 21):
-        for carta in mao:
-            if(carta[0] == "A"):
-                value -= 10
-                continue
+   
+    # Convert aces from 11 to 1 if hand exceeds 21
+    while(value > 21 and aces > 0):
+        value -= 10
+        aces -= 1
+
     return value
 ##
 

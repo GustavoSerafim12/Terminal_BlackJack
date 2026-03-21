@@ -5,7 +5,7 @@ import os
 def rules():
     
     render_regras()
-    input_rules = input("(1): voltar para menu")
+    input_rules = input("(1): voltar para menu  ")
     try:
         input_rules = int(input_rules)
     except ValueError:

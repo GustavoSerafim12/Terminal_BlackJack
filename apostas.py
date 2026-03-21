@@ -13,9 +13,9 @@ def aposta(coins, bet):
 
     render_aposta(coins)
 
-    input_buffer = input(" digite quanto quer apostar: ")
+    input_apostas = input(" digite quanto quer apostar: ")
     try:
-        bet = int(input_buffer)
+        bet = int(input_apostas)
     except ValueError:
         bet = 0
     

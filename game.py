@@ -18,18 +18,30 @@ def game():
 
     coins = 100
 
-    while(1):
-        coins = game_loop(coins)
-##
-
-def game_loop(coins):
-
-    # Create shuffled deck: all combinations of values and suits
     baralho = [
     (valor, naipe)
     for naipe in naipes
     for valor in valores
     ]
+
+    while True:
+        coins = game_loop(coins, baralho)
+        os.system('clear')
+        input_endgame = input("(1): continue ")
+        input_endgame = int(input_endgame)
+        if(coins == 0):
+            print("You lose")
+            time.sleep(1)
+            break
+        if(input_endgame != 1):
+            break
+    
+    return "menu"
+##
+
+def game_loop(coins, baralho):
+
+    # Create shuffled deck: all combinations of values and suits
     random.shuffle(baralho)
 
     player_hand = None

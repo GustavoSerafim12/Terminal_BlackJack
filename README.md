@@ -67,6 +67,9 @@ From the project folder:
 ```
 python main.py
 ```
+```
+python3 main.py
+```
 
 ---
 

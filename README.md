@@ -50,6 +50,9 @@ Check version:
 ```
 python --version
 ```
+```
+python3 --version
+```
 
 ### Install dependencies
 
